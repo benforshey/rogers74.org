@@ -1,0 +1,46 @@
+header {
+  @include outer-container;
+  // @include clearfix;
+  background: linear-gradient(to bottom, $lighter-blue, $blue, $darker-blue);
+
+  h1 {
+    color: $neutral-light;
+    margin: 0;
+    padding: .5em 0;
+    text-align: center;
+  }
+
+  nav {
+    @include span-columns(12);
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      font-size: 1.5em;
+    }
+
+    a {
+      @extend %links-darkBackground;
+
+    }
+  }
+}
+
+.documentOutline-hidden {
+  @extend %visuallyHidden;
+}
+
+@media screen and (max-width: 37em) {
+  header {
+    nav {
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.gallery {
+  @include outer-container;
+  padding-left: 0;
+
+  .gallery-photo {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  .fallbackLink {
+    @extend %links-lightBackground;
+  }
+}
+
+@media screen and (max-width: 37em) {
+  .gallery {
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+
+    .gallery-photo {
+      @include span-columns(12);
+      @include omega();
+
+    }
+
+  }
+}

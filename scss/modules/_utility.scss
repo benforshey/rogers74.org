@@ -1,0 +1,55 @@
+// @extend for links on a dark background
+%links-darkBackground {
+  color: $neutral-light;
+  border-bottom: 1px solid $neutral-light;
+  text-decoration: none;
+  transition: color .25s ease;
+
+  &:link,
+  &:visited {
+    color: $neutral-light;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: $darker-orange;
+  }
+}
+
+// @extend for links on a dark background
+%links-lightBackground {
+  border-bottom: 1px solid $neutral-dark;
+  color: $neutral-dark;
+  text-decoration: none;
+  transition: color .25s ease;
+
+  &:link,
+  &:visited {
+    color: $neutral-dark;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    color: $darker-orange;
+  }
+}
+
+// HTML5 Boilerplate accessible hidden style
+%visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
